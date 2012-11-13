@@ -1,3 +1,4 @@
+#! -*- encoding:utf-8 -*-
 __author__ = 'CLTANG'
 import time
 from dbmanager import DbManager
