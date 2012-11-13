@@ -80,6 +80,9 @@ class DbManager:
         #bind t_user
         user = DbManager.__meta.tables['user']
         mapper(User, user)
+
+        user = DbManager.__meta.tables['t_device']
+        mapper(User, user)
 #        #bind device - t_device
 #        tdevice = DbManager.__meta.tables['t_device']
 #        mapper(TDevice, tdevice)
