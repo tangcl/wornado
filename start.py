@@ -40,9 +40,9 @@ class Server(object):
 
 if __name__ == "__main__":
     from core.codecofig.setting import settings
-    from core.codecofig.rule import application
-    app = application
-    web_app = web.Application(application, **settings)
+    from core.codecofig import rule
+    app = rule.application
+    web_app = web.Application(app, **settings)
     server = Server()
     #Linux环境才可以使用
 #    server.start_sub_multi(8888, app)
