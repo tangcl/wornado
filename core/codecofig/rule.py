@@ -5,8 +5,10 @@ __author__ = 'C.L.TANG'
 '''
 from tornado import web
 from core.handler.userHander import *
+from core.dao.dbmanager import DbManager
 application = [
     (r"/static/(.*)", web.StaticFileHandler, {"path": "../../static"}),
     (r"/", BaseHandler),
     (r"/login", IndexHandler),
+    (r"/login", RegisterHandler),
 ]

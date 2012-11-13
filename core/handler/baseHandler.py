@@ -2,6 +2,7 @@
 __author__ = 'C.L.TANG'
 
 from tornado.web import RequestHandler
+from core.dao.user import *
 class BaseHandler(RequestHandler):
     '''
     arguments - 所有的 GET 或 POST 的参数,字典类型，self.request.arguments.get(name, [])
@@ -41,3 +42,5 @@ class BaseHandler(RequestHandler):
         一次请求结束，更新用户状态
         '''
         name  = self.current_user
+        user = UserDao()
+        user.handler(name)

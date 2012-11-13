@@ -6,5 +6,5 @@ Created on Mar 13, 2012
 @author: cltang
 """
 # user
-class User(object):
+class TUser(object):
     pass
