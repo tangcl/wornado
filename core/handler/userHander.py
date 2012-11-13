@@ -23,7 +23,6 @@ class MainHandler(BaseHandler):
         '''
         继承get方法，传入参数
         '''
-        logging.error("DEBUG")
         return self.render("base.html",
             args1="cc",args2="dd")
 
@@ -63,6 +62,7 @@ class IndexHandler(BaseHandler):
         继承get方法，传入参数
         '''
             #执行正常程序
+        print "login"
         return self.render("register.html")
 
 

@@ -24,8 +24,12 @@ class BaseHandler(RequestHandler):
         '''
         继承get方法，传入参数
         '''
+        print "helloworld"
+        print self.settings.get("login_url")
         if self.current_user is None:
             return self.redirect(self.settings.get("login_url"))
+        else:
+            print "cc"
 
 
     def post(self):
@@ -37,10 +41,3 @@ class BaseHandler(RequestHandler):
 
         return self.get_secure_cookie("user")
 
-    def finish(self, chunk=None):
-        '''
-        一次请求结束，更新用户状态
-        '''
-        name  = self.current_user
-        user = UserDao()
-        user.handler(name)
