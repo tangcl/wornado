@@ -5,6 +5,6 @@ settings = {"gzip":True,
             "static_url_prefix":"/static/",
             "template_path":"./template/",
             "debug":True,
-            'login_url':'/login/',
+            'login_url':'/register/',
             'cookie_secret':'adfadf'
             }

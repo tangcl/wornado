@@ -6,6 +6,6 @@ __author__ = 'C.L.TANG'
 from core.handler.userHander import *
 application = [
 #    (r"/static/(.*)", web.StaticFileHandler, {"path": "../../static"}),
-    (r"/login/", MainHandler),
+    (r"/register/", RegisterHandler),
     (r"/", BaseHandler),
 ]
