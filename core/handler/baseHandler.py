@@ -34,6 +34,7 @@ class BaseHandler(RequestHandler):
 
     def post(self):
         pass
+
     def get_current_user(self):
         '''
         查询cookie中的值，进行用户认证

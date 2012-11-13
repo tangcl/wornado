@@ -2,6 +2,7 @@
 __author__ = 'C.L.TANG'
 import logging
 from core.handler.baseHandler import BaseHandler
+from core.dao.user import UserDao
 class MainHandler(BaseHandler):
     '''
     arguments - 所有的 GET 或 POST 的参数,字典类型，self.request.arguments.get(name, [])
@@ -98,6 +99,12 @@ class RegisterHandler(BaseHandler):
 
 
     def post(self):
+
+        name = self.get_argument("user")
+        platform = self.get_argument("platform")
+        password = self.get_argument("password")
+        userdao = UserDao()
+        userdao.register_or_login(name=name, platform=platform, password=password)
         print self.request.arguments
 
     def get_current_user(self):
