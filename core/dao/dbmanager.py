@@ -52,7 +52,7 @@ class DbManager:
                 cf.get("db", "db_name"))
             '''
             try:
-                DbManager.__mysqlDb = create_engine(url,pool_size=20, max_overflow=-1, pool_recycle=7200) #,echo=True
+                DbManager.__mysqlDb = create_engine(url,pool_size=20, max_overflow=-1, pool_recycle=7200,echo=True) #
                 DbManager.__meta = MetaData()
                 DbManager.__meta.reflect(bind=DbManager.__mysqlDb)
                 DbManager.bindTables()

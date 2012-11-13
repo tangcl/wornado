@@ -39,4 +39,6 @@ class UserDao(object):
                 self.session.commit()
                 return True
         except:
+            print "error"
             self.session.rollback()
+            return False

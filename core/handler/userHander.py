@@ -95,7 +95,10 @@ class RegisterHandler(BaseHandler):
         继承get方法，传入参数
         '''
         #执行正常程序
-        return self.render("register.html")
+        if self.current_user:
+            return self.render("success.html")
+        else:
+            return self.render("register.html")
 
 
     def post(self):
@@ -104,12 +107,18 @@ class RegisterHandler(BaseHandler):
         platform = self.get_argument("platform")
         password = self.get_argument("password")
         userdao = UserDao()
-        userdao.register_or_login(name=name, platform=platform, password=password)
+        sign = userdao.register_or_login(name=name, platform=platform, password=password)
+        if sign:
+            #注册或者登录成功，设置cookie
+            self.set_secure_cookie("user", name)
+            self.render("success.html")
+        else:
+            #注册或者登录失败，返回登录页
+            self.redirect("register.html")
         print self.request.arguments
 
     def get_current_user(self):
         '''
         查询cookie中的值，进行用户认证
        '''
-
         return self.get_secure_cookie("user")

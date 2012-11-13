@@ -24,12 +24,10 @@ class BaseHandler(RequestHandler):
         '''
         继承get方法，传入参数
         '''
-        print "helloworld"
-        print self.settings.get("login_url")
         if self.current_user is None:
             return self.redirect(self.settings.get("login_url"))
         else:
-            print "cc"
+            return self.render("success.html")
 
 
     def post(self):
