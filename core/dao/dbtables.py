@@ -8,3 +8,9 @@ Created on Mar 13, 2012
 # user
 class TUser(object):
     pass
+
+class VVideo(object):
+    pass
+
+class FFollower(object):
+    pass
