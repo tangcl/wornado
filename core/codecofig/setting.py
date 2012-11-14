@@ -8,3 +8,4 @@ settings = {"gzip":True,
             'login_url':'/register/',
             'cookie_secret':'adfadf'
             }
+port = 8888
