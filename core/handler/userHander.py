@@ -24,7 +24,7 @@ class MainHandler(BaseHandler):
         '''
         继承get方法，传入参数
         '''
-        return self.render("base.html",
+        return self.render("video.html",
             args1="cc",args2="dd")
 
 
@@ -66,7 +66,6 @@ class IndexHandler(BaseHandler):
         print "login"
         return self.render("register.html")
 
-
     def post(self):
         pass
     def get_current_user(self):
@@ -96,26 +95,134 @@ class RegisterHandler(BaseHandler):
         '''
         #执行正常程序
         if self.current_user:
-            return self.render("success.html")
+            return self.render("success.html", user_id = int(self.get_secure_cookie("user")))
         else:
             return self.render("register.html")
 
-
     def post(self):
-
         name = self.get_argument("user")
         platform = self.get_argument("platform")
         password = self.get_argument("password")
         userdao = UserDao()
-        sign = userdao.register_or_login(name=name, platform=platform, password=password)
+        try:
+            sign, user = userdao.register_or_login(name=name, platform=platform, password=password)
+        except:
+            return self.render("error.html")
         if sign:
-            #注册或者登录成功，设置cookie
-            self.set_secure_cookie("user", name)
-            self.render("success.html")
+            self.set_secure_cookie("user", str(user.id))
+            self.render("success.html", user_id=user.id)
         else:
             #注册或者登录失败，返回登录页
-            self.redirect("register.html")
-        print self.request.arguments
+            self.render("register.html")
+
+    def get_current_user(self):
+        '''
+        查询cookie中的值，进行用户认证
+       '''
+        return self.get_secure_cookie("user")
+
+class CreateFollowerHandler(BaseHandler):
+    '''
+    用户注册
+    '''
+    def initialize(self):
+        '''
+        继承RequestHandler方法,可以传入参数database,形如：
+        def initialize(self, databases):
+            pass
+        app = Application([
+            (r'/user/(.*)', ProfileHandler, dict(database=database)),
+            ])
+        '''
+
+    def get(self, follower_id):
+        '''
+        创建关注关系
+        '''
+        user_id = self.get_secure_cookie("user")
+        userdao = UserDao()
+        try:
+            sign = userdao.create_follower(user_id, follower_id)
+        except:
+            return self.render("error.html")
+        self.set_secure_cookie("user", user_id)
+        self.redirect("/list_follower")
+
+    def get_current_user(self):
+        '''
+        查询cookie中的值，进行用户认证
+       '''
+        return self.get_secure_cookie("user")
+
+class DelFollowerHandler(BaseHandler):
+    '''
+    用户注册
+    '''
+    def initialize(self):
+        '''
+        继承RequestHandler方法,可以传入参数database,形如：
+        def initialize(self, databases):
+            pass
+        app = Application([
+            (r'/user/(.*)', ProfileHandler, dict(database=database)),
+            ])
+        '''
+
+    def get(self, follower_id):
+        '''
+        创建关注关系
+        '''
+        user_id = self.get_secure_cookie("user")
+        userdao = UserDao()
+        try:
+            sign = userdao.del_follower(user_id, follower_id)
+        except:
+            return self.render("error.html")
+        self.set_secure_cookie("user", user_id)
+        self.redirect("/list_follower")
+
+    def get_current_user(self):
+        '''
+        查询cookie中的值，进行用户认证
+       '''
+        return self.get_secure_cookie("user")
+
+class ListFollowerHandler(BaseHandler):
+    '''
+    列出用户的关注情况
+    '''
+    def get(self):
+        user_id = self.get_secure_cookie("user")
+        userdao = UserDao()
+        try:
+            data = userdao.ListFollower(int(user_id))
+        except:
+            self.render("error.html")
+        if self.settings.get("debug"):
+            return self.render("list_follower.html",datas=data)
+        else:
+            #返回json数据
+            pass
+
+    def get_current_user(self):
+        '''
+        查询cookie中的值，进行用户认证
+       '''
+        return self.get_secure_cookie("user")
+
+class HotUserHandler(BaseHandler):
+    '''
+    列出用户的关注情况
+    '''
+    def get(self):
+        #查询出fans数最多的用户100个用户
+        hot_user = UserDao()
+        try:
+            datas = hot_user.hosUser()
+            print "datas:", datas
+        except:
+            return self.render("error.html")
+        return self.render("list_follower.html", datas = datas)
 
     def get_current_user(self):
         '''

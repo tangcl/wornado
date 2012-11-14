@@ -27,7 +27,7 @@ class BaseHandler(RequestHandler):
         if self.current_user is None:
             return self.redirect(self.settings.get("login_url"))
         else:
-            return self.render("success.html")
+            return self.render("success.html", user_id=int(self.current_user))
 
 
     def post(self):
