@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c84c1e70-705e-4bb1-8be3-c58635615286" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/dao/category.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/dao/topic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/handler/adminHandler.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/handler/categoryHandler.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/handler/topicHandler.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/admin_category_after.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/admin_category_before.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/category.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/list_category.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/list_topic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/img/c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/readme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/video/store/d" />
+      <change type="DELETED" beforePath="D:\python\workspace\TornadoProject\wornado\core\dao\readme" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/xylx.conf" afterPath="$PROJECT_DIR$/config/xylx.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/codecofig/rule.py" afterPath="$PROJECT_DIR$/core/codecofig/rule.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/dao/dbmanager.py" afterPath="$PROJECT_DIR$/core/dao/dbmanager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/dao/dbtables.py" afterPath="$PROJECT_DIR$/core/dao/dbtables.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/success.html" afterPath="$PROJECT_DIR$/template/success.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/upload.html" afterPath="$PROJECT_DIR$/template/upload.html" />
     </list>
     <ignored path="wornado.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,46 +45,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="readme" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/readme">
+      <file leaf-file-name="rule.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/codecofig/rule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="28" column="19" selection-start="1101" selection-end="1106" vertical-scroll-proportion="-7.54">
+              <folding>
+                <element signature="e#72#109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topicHandler.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/handler/topicHandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="37" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/start.py">
+      <file leaf-file-name="list_topic.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/list_topic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
+            <state line="18" column="26" selection-start="451" selection-end="451" vertical-scroll-proportion="0.34453782">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseHandler.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/handler/baseHandler.py">
+      <file leaf-file-name="topic_middle.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/topic_middle.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="26" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videoHander.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/handler/videoHander.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bold.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/bold.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+            <state line="11" column="59" selection-start="328" selection-end="328" vertical-scroll-proportion="-7.6153846">
               <folding />
             </state>
           </provider>
@@ -72,8 +86,55 @@
       <file leaf-file-name="userHander.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/handler/userHander.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="14" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbmanager.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/dao/dbmanager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="153" column="41" selection-start="4847" selection-end="4853" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_category.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/list_category.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="51" selection-start="756" selection-end="762" vertical-scroll-proportion="-10.192307">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbtables.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/dao/dbtables.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="6" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="success.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/success.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="23" selection-start="298" selection-end="311" vertical-scroll-proportion="-11.769231">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topic.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/dao/topic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="129" selection-start="1287" selection-end="1298" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#48#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,14 +152,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/start.py" />
+        <option value="$PROJECT_DIR$/template/admin_category_before.html" />
+        <option value="$PROJECT_DIR$/template/admin_category_after.html" />
+        <option value="$PROJECT_DIR$/core/handler/adminHandler.py" />
+        <option value="$PROJECT_DIR$/core/handler/topic.py" />
+        <option value="$PROJECT_DIR$/template/create_topic.html" />
+        <option value="$PROJECT_DIR$/template/list_category.html" />
+        <option value="$PROJECT_DIR$/core/dao/dbtables.py" />
+        <option value="$PROJECT_DIR$/template/success.html" />
+        <option value="$PROJECT_DIR$/core/handler/categoryHandler.py" />
+        <option value="$PROJECT_DIR$/core/dao/category.py" />
+        <option value="$PROJECT_DIR$/core/codecofig/rule.py" />
+        <option value="$PROJECT_DIR$/core/handler/topicHandler.py" />
+        <option value="$PROJECT_DIR$/template/topic_middle.html" />
+        <option value="$PROJECT_DIR$/core/dao/dbmanager.py" />
+        <option value="$PROJECT_DIR$/core/dao/topic.py" />
+        <option value="$PROJECT_DIR$/template/list_topic.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="x" value="-2" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -155,6 +230,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -167,27 +256,76 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="119" />
     <property name="options.lastSelected" value="Settings.JavaScript.Linters.JSLint" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="129" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="716" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="919" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="716" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="126" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="126" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python\workspace\TornadoProject\wornado\template" />
+      <recent name="D:\python\workspace\TornadoProject\wornado\video\store" />
+      <recent name="D:\python\workspace\TornadoProject\wornado\core\dao" />
       <recent name="D:\python\workspace\TornadoProject\wornado" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.dbmanager">
+    <configuration default="false" name="start" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="wornado" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="MULTIPROCESS" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="dbmanager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core/dao" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="wornado" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/dao/dbmanager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="MULTIPROCESS" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -241,7 +379,17 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.start" />
+      <item index="1" class="java.lang.String" itemvalue="Python.dbmanager" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
@@ -254,30 +402,118 @@
       <created>1352820305328</created>
       <updated>1352820305328</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="项目初始化">
+      <created>1352822247408</created>
+      <updated>1352822247408</updated>
+    </task>
+    <task id="LOCAL-00003" summary="项目初始化">
+      <created>1352822841559</created>
+      <updated>1352822841559</updated>
+    </task>
+    <task id="LOCAL-00004" summary="用户使用后更新">
+      <created>1352823339287</created>
+      <updated>1352823339287</updated>
+    </task>
+    <task id="LOCAL-00005" summary="用户使用后更新">
+      <created>1352823942851</created>
+      <updated>1352823942851</updated>
+    </task>
+    <task id="LOCAL-00006" summary="用户使用后更新">
+      <created>1352825255414</created>
+      <updated>1352825255414</updated>
+    </task>
+    <task id="LOCAL-00007" summary="用户使用后更新">
+      <created>1352826789431</created>
+      <updated>1352826789431</updated>
+    </task>
+    <task id="LOCAL-00008" summary="用户使用后更新">
+      <created>1352826812907</created>
+      <updated>1352826812907</updated>
+    </task>
+    <task id="LOCAL-00009" summary="用户使用后更新">
+      <created>1352829599915</created>
+      <updated>1352829599915</updated>
+    </task>
+    <task id="LOCAL-00010" summary="用户使用后更新">
+      <created>1352829614635</created>
+      <updated>1352829614635</updated>
+    </task>
+    <task id="LOCAL-00011" summary="用户使用后更新">
+      <created>1352829632481</created>
+      <updated>1352829632481</updated>
+    </task>
+    <task id="LOCAL-00012" summary="用户使用后更新">
+      <created>1352830821668</created>
+      <updated>1352830821668</updated>
+    </task>
+    <task id="LOCAL-00013" summary="用户使用后更新">
+      <created>1352830832281</created>
+      <updated>1352830832281</updated>
+    </task>
+    <task id="LOCAL-00014" summary="用户使用后更新">
+      <created>1352905046468</created>
+      <updated>1352905046468</updated>
+    </task>
+    <task id="LOCAL-00015" summary="用户使用后更新">
+      <created>1352905066160</created>
+      <updated>1352905066160</updated>
+    </task>
+    <task id="LOCAL-00016" summary="用户使用后更新">
+      <created>1352905092183</created>
+      <updated>1352905092183</updated>
+    </task>
+    <task id="LOCAL-00017" summary="用户使用后更新">
+      <created>1352905109179</created>
+      <updated>1352905109179</updated>
+    </task>
+    <task id="LOCAL-00018" summary="用户使用后更新">
+      <created>1352947183732</created>
+      <updated>1352947183732</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-2" y="0" width="1378" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6718213" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21439394" sideWeight="0.49484536" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29393938" sideWeight="0.6701031" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39862543" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21439394" sideWeight="0.5017182" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32784185" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298969" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34364262" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39862543" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21439394" sideWeight="0.5017182" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29848486" sideWeight="0.17525773" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30775076" sideWeight="0.73883164" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2611684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -321,7 +557,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户使用后更新" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -335,49 +571,126 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="项目初始化" />
+    <MESSAGE value="用户使用后更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cache/readme">
+    <entry file="file://$PROJECT_DIR$/core/dao/video.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/handler/baseHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="26" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/handler/videoHander.py">
+    <entry file="file://$PROJECT_DIR$/template/category.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/list_follower.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="149" selection-end="287" vertical-scroll-proportion="-3.4615386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/handler/categoryHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="35" selection-start="860" selection-end="873" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/dao/category.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="19" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#48#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/codecofig/rule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="19" selection-start="1101" selection-end="1106" vertical-scroll-proportion="-7.54">
+          <folding>
+            <element signature="e#72#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/list_category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="51" selection-start="756" selection-end="762" vertical-scroll-proportion="-10.192307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="23" selection-start="298" selection-end="311" vertical-scroll-proportion="-11.769231">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/handler/userHander.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="14" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/bold.html">
+    <entry file="file://$PROJECT_DIR$/template/topic_middle.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+        <state line="11" column="59" selection-start="328" selection-end="328" vertical-scroll-proportion="-7.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/dao/dbtables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="6" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/dao/dbmanager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="41" selection-start="4847" selection-end="4853" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/dao/topic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="129" selection-start="1287" selection-end="1298" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#48#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/handler/topicHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="37" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/list_topic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="26" selection-start="451" selection-end="451" vertical-scroll-proportion="0.34453782">
           <folding />
         </state>
       </provider>

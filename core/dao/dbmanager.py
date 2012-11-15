@@ -84,6 +84,18 @@ class DbManager:
         follower = DbManager.__meta.tables['follower']
         mapper(FFollower, follower, properties=\
             {"follower_user": relationship(TUser)})
+
+        category = DbManager.__meta.tables['category']
+        mapper(CCategory, category)
+
+        category_topic = DbManager.__meta.tables['category_topic']
+        mapper(CCategoryTopic, category_topic)
+
+        topic = DbManager.__meta.tables['topic']
+        mapper(TTopic, topic,properties=\
+            {"category_topic": relationship(CCategoryTopic)})
+
+
         
     def getSession(self): 
         Session.remove()
@@ -136,10 +148,16 @@ class Check_Sql():
         follower_id = 2
         user = self.session.query(FFollower).filter_by(user_id=user_id, follower_id=follower_id).delete()
         self.session.commit()
+
+    def find_topic(self):
+        category_id = 1
+        topic = self.session.query(TTopic).filter(TTopic.id==CCategoryTopic.topic_id, CCategoryTopic.category_id==category_id).all()
+        print "topic:", topic
+
 if __name__=="__main__":
     #测试根据id查询软件信息
     class_test = Check_Sql()
-    class_test.del_follower()
+    class_test.find_topic()
 
 
 

@@ -5,6 +5,9 @@ __author__ = 'C.L.TANG'
 '''
 from core.handler.userHander import *
 from core.handler.videoHander import *
+from core.handler.adminHandler import *
+from core.handler.categoryHandler import *
+from core.handler.topicHandler import *
 from tornado.web import ErrorHandler
 from tornado import web
 application = [
@@ -20,4 +23,8 @@ application = [
     (r"/del_follower/(.*?)", DelFollowerHandler),
     (r"/list_video/(.*?)", VideoHandler),
     (r"/upload_before", UploadHandler),
+    (r"/admin", AdminCreateCategoryHandler),
+    (r"/list_category", CategoryListHandler),
+    (r"/create_topic/(.*?)", TopicCreateHandler),
+    (r"/list_topic/(.*?)", TopicListHandler),
 ]

@@ -14,3 +14,12 @@ class VVideo(object):
 
 class FFollower(object):
     pass
+
+class CCategory(object):
+    pass
+
+class TTopic(object):
+    pass
+
+class CCategoryTopic(object):
+    pass

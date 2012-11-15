@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>列出所有分类ID为：{{ data.get("category_id")}}的题目</h1>
+<table border="1">
+    <tr>
+        <td>序号</td>
+        <td>内容</td>
+        <td>创建时间</td>
+    </tr>
+    {% if data.get("data") %}
+        {% for d in data.get("data") %}
+        <tr>
+            <td>{{ d.id}}</td>
+            <td>{{ d.text }}</td>
+            <td>{{ d.create_date }}</td>
+        </tr>
+        {% end %}
+    {% end %}
+</table>
+</body>
+</html>

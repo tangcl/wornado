@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>
+
+        {% if sign %}
+            添加分类成功
+                2秒钟后跳转到分类列表<script type="text/javascript">
+                    setTimeout(function(){
+                        self.location="/list_category";
+                    },2000);
+                </script>
+        {% else %}
+            添加分类失败,2秒钟后返回上一页
+                <script type="text/javascript">
+                    setTimeout(function(){
+                        self.location=document.referrer;
+                    },2000);
+                </script>
+        {% end %}
+    </h1>
+</body>
+</html>
