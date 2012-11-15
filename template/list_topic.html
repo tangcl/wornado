@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<h1>列出所有分类ID为：{{ data.get("category_id")}}的题目</h1>
+<h1>列出分类ID为：{{ data.get("category_id")}}的题目</h1>
 <table border="1">
     <tr>
         <td>序号</td>
@@ -16,7 +16,7 @@
         {% for d in data.get("data") %}
         <tr>
             <td>{{ d.id}}</td>
-            <td>{{ d.text }}</td>
+            <td><a href="/upload_before/{{ d.id}}" title="点击创建该视频">{{ d.text }}</a></td>
             <td>{{ d.create_date }}</td>
         </tr>
         {% end %}

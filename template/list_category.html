@@ -23,7 +23,7 @@
                 <td><input type="text" name="create" /><input type="submit" value="点击创建该分类下的题目"/></td>
             </form>
             <form action="/search_topic/{{ category.id }}" method="POST">
-            <td><input type="text" name="search" value="搜索该分类下题目"><input type="submit" value="搜索该分类下题目"/></td>
+            <td><input type="text" name="search" /><input type="submit" value="搜索该分类下题目"/></td>
             </form>
         </tr>
         {%end%}
