@@ -29,7 +29,10 @@ class CategoryListHandler(BaseHandler):
         '''
         #创建一个分类
         list_category = CategoryDao()
-        data = list_category.list_category()
+        try:
+            data = list_category.list_category()
+        except:
+            return self.render("error.html")
         if data:
             return self.render("list_category.html", list_category=data)
         else:
