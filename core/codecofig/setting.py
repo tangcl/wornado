@@ -6,6 +6,8 @@ settings = {"gzip":True,
             "template_path":"./template/",
             "debug":True,
             'login_url':'/register/',
-            'cookie_secret':'adfadf'
+            'cookie_secret':'adfadf',
+            "store_path":"./video/store",
+            "img_path":"./video/img",
             }
 port = 8888

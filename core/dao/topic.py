@@ -11,7 +11,13 @@ class TopicDao(object):
         else:
             return None
 
-
+    def get_text(self, topic_id):
+        self.session = self.getSession()
+        try:
+            topic = self.session.query(TTopic).filter(TTopic.id==topic_id).first()
+        except:
+            return False
+        return topic
 
     def add_topic(self, text, category_id):
         self.session = self.getSession()
@@ -42,3 +48,13 @@ class TopicDao(object):
             self.session.rollback()
             return False
         return topic
+
+    def search_topic(self, keyword, category_id):
+        self.session = self.getSession()
+        try:
+            result = self.session.query(TTopic).filter(TTopic.text.like("%"+keyword+"%"), CCategoryTopic.topic_id==TTopic.id, CCategoryTopic.category_id==category_id).all()
+            self.session.commit()
+        except:
+            self.session.rollback()
+            return False
+        return result

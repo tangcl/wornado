@@ -154,10 +154,14 @@ class Check_Sql():
         topic = self.session.query(TTopic).filter(TTopic.id==CCategoryTopic.topic_id, CCategoryTopic.category_id==category_id).all()
         print "topic:", topic
 
+    def search_topic(self):
+        keyword = "莫"
+        result = self.session.query(TTopic).filter(TTopic.text.like("%"+keyword+"%"), CCategoryTopic.topic_id==TTopic.id, CCategoryTopic.category_id==1).all()
+        print result
 if __name__=="__main__":
     #测试根据id查询软件信息
     class_test = Check_Sql()
-    class_test.find_topic()
+    class_test.search_topic()
 
 
 

@@ -22,9 +22,11 @@ application = [
     (r"/create_follower/(.*?)", CreateFollowerHandler),
     (r"/del_follower/(.*?)", DelFollowerHandler),
     (r"/list_video/(.*?)", VideoHandler),
-    (r"/upload_before", UploadHandler),
+    (r"/upload_before/(.*?)", UploadBeforeHandler),
+    (r"/upload", UploadHandler),
     (r"/admin", AdminCreateCategoryHandler),
     (r"/list_category", CategoryListHandler),
     (r"/create_topic/(.*?)", TopicCreateHandler),
     (r"/list_topic/(.*?)", TopicListHandler),
+    (r"/search_topic/(.*?)", TopicSearchHandler),
 ]
