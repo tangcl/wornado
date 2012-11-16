@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>视频详情页面</h1>
+    <table border="1">
+        <tr>
+            <td><embed src="/downloadstore/{{ data[0].native_path}}" autostart="true" loop="true" width="500" height="350" ></td>
+        </tr>
+        {% if data[1] %}
+        {% for comment in data[1]%}
+        <tr>
+            <td>
+               {{ comment.comment_user.name}}说：
+            </td>
+            <td>
+                {{ comment.text}}
+            </td>
+        </tr>
+        {%end%}
+        {%else%}
+        暂无评论
+        {%end%}
+    </table>
+</body>
+</html>

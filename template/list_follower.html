@@ -9,7 +9,6 @@
     <tr>
         <td>用户ID</td>
         <td>视频路径</td>
-        <td>视频图片路径</td>
         <td>当前视频数</td>
         <td>关注</td>
     </tr>
@@ -17,11 +16,13 @@
         {% block data %}
         <tr>
             <td><a href="/list_video/{{ data.keys()[0]}}" title="点击这里获取用户的视频">{{ data.keys()[0]}}</a></td>
-            <td><a href="{{ data.values()[0].videopath}}">{{ data.values()[0].videopath}}</a></td>
-            <td><a href="{{ data.values()[0].videoimg}}">{{ data.values()[0].videoimg}}</a></td>
+            <td>
+                <a href="{{ data.values()[0].native_path}}" >{{ data.values()[0].native_path}}</a>
+            </td>
             <td>{{ data.values()[0].count}}</td>
             <td><a href="/create_follower/{{ data.keys()[0]}}">关注他</a></td>
             <td><a href="/del_follower/{{ data.keys()[0]}}">取消关注</a></td>
+            <td><a href="/show_user/{{ data.keys()[0]}}">用户档案</a></td>
         </tr>
         {% end%}
     {% end %}

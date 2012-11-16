@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    {% if sign%}
+        <h1>视频评论成功,正在进入视频详情页</h1>
+        <script type="text/javascript">
+            setTimeout(function(){
+                self.location="/video_detail/{{ video_id }}";
+            },2000);
+        </script>
+    {%else%}
+        <h1>视频评论失败，2秒后返回上一层</h1>
+            <script type="text/javascript">
+                setTimeout(function(){
+                    self.location=document.referrer;
+                },2000);
+            </script>
+    {% end%}
+
+</body>
+</html>

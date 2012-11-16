@@ -3,13 +3,13 @@
 <html>
 <head>
     <title></title>
-    <script type="text/javascript">
-        setTimeout(function(){
-            self.location=document.referrer;
-        },2000);
-    </script>
 </head>
 <body>
-<center>{{ message }}，2秒后返回</center>
+    <h1>创建视频成功，2秒后跳转进入视频</h1>
+    <script type="text/javascript">
+        setTimeout(function(){
+            self.location="/list_category";
+        },2000);
+    </script>
 </body>
 </html>

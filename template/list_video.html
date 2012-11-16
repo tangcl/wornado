@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>{% block title %}Default title{% end %}</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>视频地址</td>
+        <td>视频评论数</td>
+        <td>赞</td>
+        <td>答案列表:</td>
+    </tr>
+    {% for video in videos %}
+    <tr>
+        <td><a href="/video_detail/{{ video.id }}">{{ video.native_path }}</a></td>
+        <td>{{ video.comment}}</td>
+        <td><a href="/add_praise/{{ video.id }}" title="点击+1">{{ video.praise}}</a></td>
+        <td>
+            {% for topic in video.wrong%}
+                <a href="/check_answer/{{ video.id}}/{{topic.id}}/">{{topic.text}}</a><br/>
+            {% end%}
+        </td>
+        <td><form action="/video_comment/{{video.id}}" method="POST">
+            <input type="text" name="comment"/>
+            <input type="submit" value="提交评论"/>
+        </form></td>
+    </tr>
+    {%end%}
+</table>
+</body>
+</html>
