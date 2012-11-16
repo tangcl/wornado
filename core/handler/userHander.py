@@ -24,7 +24,7 @@ class MainHandler(BaseHandler):
         '''
         继承get方法，传入参数
         '''
-        return self.render("video.html",
+        return self.render("list_video.html",
             args1="cc",args2="dd")
 
 
@@ -107,7 +107,7 @@ class RegisterHandler(BaseHandler):
         try:
             sign, user = userdao.register_or_login(name=name, platform=platform, password=password)
         except:
-            return self.render("error.html")
+            return self.render("error.html", message="服务器错误")
         if sign:
             self.set_secure_cookie("user", str(user.id))
             self.render("success.html", user_id=user.id)
@@ -122,18 +122,6 @@ class RegisterHandler(BaseHandler):
         return self.get_secure_cookie("user")
 
 class CreateFollowerHandler(BaseHandler):
-    '''
-    用户注册
-    '''
-    def initialize(self):
-        '''
-        继承RequestHandler方法,可以传入参数database,形如：
-        def initialize(self, databases):
-            pass
-        app = Application([
-            (r'/user/(.*)', ProfileHandler, dict(database=database)),
-            ])
-        '''
 
     def get(self, follower_id):
         '''
@@ -144,7 +132,7 @@ class CreateFollowerHandler(BaseHandler):
         try:
             sign = userdao.create_follower(user_id, follower_id)
         except:
-            return self.render("error.html")
+            return self.render("error.html", message="服务器错误")
         self.set_secure_cookie("user", user_id)
         self.redirect("/list_follower")
 
@@ -177,7 +165,7 @@ class DelFollowerHandler(BaseHandler):
         try:
             sign = userdao.del_follower(user_id, follower_id)
         except:
-            return self.render("error.html")
+            return self.render("error.html", message="服务器错误")
         self.set_secure_cookie("user", user_id)
         self.redirect("/list_follower")
 
@@ -197,7 +185,7 @@ class ListFollowerHandler(BaseHandler):
         try:
             data = userdao.ListFollower(int(user_id))
         except:
-            self.render("error.html")
+            return self.render("error.html", message="服务器错误")
         if self.settings.get("debug"):
             return self.render("list_follower.html",datas=data)
         else:
@@ -219,10 +207,48 @@ class HotUserHandler(BaseHandler):
         hot_user = UserDao()
         try:
             datas = hot_user.hosUser()
-            print "datas:", datas
         except:
-            return self.render("error.html")
+            return self.render("error.html", message="服务器错误")
         return self.render("list_follower.html", datas = datas)
+
+    def get_current_user(self):
+        '''
+        查询cookie中的值，进行用户认证
+       '''
+        return self.get_secure_cookie("user")
+
+class ShowUserHandler(BaseHandler):
+    '''
+    列出用户的关注情况
+    '''
+    def get(self,user_id):
+        #查询出fans数最多的用户100个用户
+        user_detail = UserDao()
+        try:
+            datas = user_detail.get_user(user_id)
+        except:
+            return self.render("error.html", message="服务器错误")
+        return self.render("user_detail.html", datas = datas)
+
+    def get_current_user(self):
+        '''
+        查询cookie中的值，进行用户认证
+       '''
+        return self.get_secure_cookie("user")
+
+class SearchUserHandler(BaseHandler):
+    '''
+    列出用户的关注情况
+    '''
+    def post(self):
+        #查询出fans数最多的用户100个用户
+        text = self.get_argument("text")
+        userdao = UserDao()
+        try:
+            result = userdao.search(text)
+            return self.render("list_user.html", result = result)
+        except:
+            self.render("error.html", message="没有该用户")
 
     def get_current_user(self):
         '''

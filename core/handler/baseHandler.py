@@ -27,7 +27,15 @@ class BaseHandler(RequestHandler):
         if self.current_user is None:
             return self.redirect(self.settings.get("login_url"))
         else:
-            return self.render("success.html", user_id=int(self.current_user))
+            user_id = int(self.current_user)
+            userdao = UserDao()
+            u = userdao.find_user(user_id)
+            if u:
+                return self.render("success.html", user_id=int(self.current_user))
+            else:
+                #删除cookie
+                self.clear_all_cookies()
+                return self.redirect("/")
 
 
     def post(self):

@@ -38,5 +38,16 @@ class AdminCreateCategoryHandler(BaseHandler):
         try:
             sign = categorydao.add_category(text)
         except:
-            return self.render("error.html")
+            return self.render("error.html", message="服务器错误或该分类已存在")
         return self.render("admin_category_after.html", sign=sign)
+
+class LogoutHandler(BaseHandler):
+
+    def get(self):
+        '''
+        继承get方法，传入参数
+        '''
+        #创建一个分类
+        self.clear_all_cookies()
+
+        return self.redirect("/")

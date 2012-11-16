@@ -33,7 +33,7 @@ class TopicListHandler(BaseHandler):
         try:
             data = topicdao.list_topic(category_id)
         except:
-            return self.render("error.html")
+            return self.render("error.html", message="服务器错误")
         return self.render("list_topic.html", data = {"category_id":category_id, "data": data})
 
 class TopicCreateHandler(BaseHandler):
@@ -43,21 +43,12 @@ class TopicCreateHandler(BaseHandler):
     path - 请求的路径（ ? 之前的所有内容）
     headers - 请求的开头信息
     '''
-    def initialize(self):
-        '''
-        继承RequestHandler方法,可以传入参数database,形如：
-        def initialize(self, databases):
-            pass
-        app = Application([
-            (r'/user/(.*)', ProfileHandler, dict(database=database)),
-            ])
-        '''
 
     def post(self, category_id):
         try:
             topic = self.get_argument("create")
         except:
-            self.render("error.html")
+            self.render("error.html",message="题目不能为空")
         #获取category_id
         topicdao = TopicDao()
         try:
@@ -87,7 +78,7 @@ class TopicSearchHandler(BaseHandler):
         try:
             text = self.get_argument("search")
         except:
-            self.render("error.html")
+            self.render("error.html", message="关键字不能为空")
             #获取category_id
         topicdao = TopicDao()
         try:
