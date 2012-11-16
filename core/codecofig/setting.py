@@ -7,7 +7,7 @@ settings = {"gzip":True,
             "debug":True,
             'login_url':'/register/',
             'cookie_secret':'adfadf',
-            "store_path":"./video/store",
-            "img_path":"./video/img",
+            "store_path":r"D:\python\workspace\TornadoProject\wornado\video\store\\",
+            "img_path":r"D:\python\workspace\TornadoProject\wornado\video\img\\",
             }
 port = 8888

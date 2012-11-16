@@ -13,6 +13,7 @@ from tornado import web
 application = [
 #    (r"/static/(.*)", web.StaticFileHandler, {"path": "../../static"}),
     (r"/register/", RegisterHandler),
+    (r"/logout", LogoutHandler),
     (r"/", BaseHandler),
     (r"/error",ErrorHandler),
     (r"/list_follower", ListFollowerHandler),
@@ -29,4 +30,10 @@ application = [
     (r"/create_topic/(.*?)", TopicCreateHandler),
     (r"/list_topic/(.*?)", TopicListHandler),
     (r"/search_topic/(.*?)", TopicSearchHandler),
+    (r"/newest", NewestHandler),
+    (r"/video_comment/(.*?)", CommentHandler),
+    (r"/video_detail/(.*?)", DetailHandler),
+    (r"/add_praise/(.*?)", PraiseHandler),
+    (r"/show_user/(.*?)", ShowUserHandler),
+    (r"/search_user", SearchUserHandler),
 ]
