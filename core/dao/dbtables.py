@@ -23,3 +23,9 @@ class TTopic(object):
 
 class CCategoryTopic(object):
     pass
+
+class Comment(object):
+    pass
+
+class IndexPraise(object):
+    pass

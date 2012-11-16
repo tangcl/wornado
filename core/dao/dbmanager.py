@@ -93,7 +93,14 @@ class DbManager:
 
         topic = DbManager.__meta.tables['topic']
         mapper(TTopic, topic,properties=\
-            {"category_topic": relationship(CCategoryTopic)})
+            {"category_topicss": relationship(CCategoryTopic)})
+
+        comment = DbManager.__meta.tables['comment']
+        mapper(Comment, comment, properties=\
+            {"comment_user": relationship(TUser)})
+
+        indexpraise = DbManager.__meta.tables['index_praise']
+        mapper(IndexPraise, indexpraise)
 
 
         
@@ -137,9 +144,7 @@ class Check_Sql():
             try:
                 user_id = follower.follower_user.id
                 video = self.session.query(VVideo).filter_by(user_id=user_id).order_by(desc(VVideo.create_date)).first()
-                print video.videopath
                 video_count = self.session.query(VVideo).filter_by(user_id=user_id).count()
-                print "video_count:",video_count
             except:
                 continue
 
@@ -158,10 +163,15 @@ class Check_Sql():
         keyword = "莫"
         result = self.session.query(TTopic).filter(TTopic.text.like("%"+keyword+"%"), CCategoryTopic.topic_id==TTopic.id, CCategoryTopic.category_id==1).all()
         print result
+
+    def find_index_praise(self):
+        user_id = 1
+        video_id = 2
+        index_praise = self.session.query(IndexPraise).filter(IndexPraise.user_id==user_id, IndexPraise.video_id==video_id).first()
 if __name__=="__main__":
     #测试根据id查询软件信息
     class_test = Check_Sql()
-    class_test.search_topic()
+    class_test.find_index_praise()
 
 
 

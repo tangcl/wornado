@@ -5,6 +5,7 @@ from dbmanager import DbManager
 from dbtables import *
 from sqlalchemy import desc
 from core.func import URL
+from sqlalchemy import or_
 class UserDao(object):
     def getSession(self):
         self.dbManager = DbManager.getInstance()
@@ -43,7 +44,8 @@ class UserDao(object):
                 self.session.add(user)
                 self.session.commit()
                 return True, user
-        except:
+        except Exception, e:
+            print e
             self.session.rollback()
             return False, None
 
@@ -80,7 +82,6 @@ class UserDao(object):
             self.session.commit()
             #用户user表更新数据,user_id=user_id的关注数+1
             user = self.session.query(TUser).filter_by(user_id=user_id).first()
-            print "user:",user
             if user:
                 user.followers = int(user.followers) + 1
                 self.session.commit()
@@ -124,8 +125,8 @@ class UserDao(object):
             try:
                 user_id = follower.follower_user.id
                 video = self.session.query(VVideo).filter_by(user_id=user_id).order_by(desc(VVideo.create_date)).first()
-                video.videopath = URL.make_video_url(video.videopath)
-                video.videoimg = URL.make_img_url(video.videoimg)
+                video.native_path = URL.make_video_url(video.native_path)
+                video.native_img_path = URL.make_img_url(video.native_img_path)
                 #获取当前视频数
                 video_count = self.session.query(VVideo).filter_by(user_id=user_id).count()
                 video.count = video_count
@@ -137,19 +138,45 @@ class UserDao(object):
 
     def hosUser(self):
         self.session = self.getSession()
-        datas = self.session.query(TUser).order_by(desc(TUser.fans)).all()[:10]
+        datas = self.session.query(TUser).order_by(desc(TUser.fans), desc(TUser.video)).all()[:10]
+        print "datas:", datas
         all_data = []
         for data in datas:
             try:
                 user_id = data.id
                 video = self.session.query(VVideo).filter_by(user_id=user_id).order_by(desc(VVideo.create_date)).first()
-                video.videopath = URL.make_video_url(video.videopath)
-                video.videoimg = URL.make_img_url(video.videoimg)
+                video.native_path = URL.make_video_url(video.native_path)
+                video.native_img_path = URL.make_img_url(video.native_img_path)
                 #获取当前视频数
                 video_count = self.session.query(VVideo).filter_by(user_id=user_id).count()
                 video.count = video_count
             except Exception, e:
                 #点击获取热门用户后查询出他们的最新视频
+                print e
                 continue
             all_data.append({user_id:video})
         return all_data
+
+    def find_user(self, user_id):
+            self.session = self.getSession()
+            try:
+                user = self.session.query(TUser).filter_by(id=user_id).first()
+                if user:
+                    return True
+                else:
+                    return False
+            except:
+                return False
+
+    def get_user(self, user_id):
+        self.session = self.getSession()
+        user = self.session.query(TUser).filter_by(id=user_id).first()
+        return user
+
+    def search(self, text):
+        self.session = self.getSession()
+        try:
+            result = self.session.query(TUser).filter(or_(TUser.name.like("%"+text+"%"), TUser.sign.like("%"+text+"%"))).all()
+            return result
+        except:
+            return False
