@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c84c1e70-705e-4bb1-8be3-c58635615286" name="Default" comment="用户使用后更新">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/func/file_handler.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/func/screenshot.py" />
-      <change type="DELETED" beforePath="D:\python\workspace\TornadoProject\wornado\template\bold.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\python\workspace\TornadoProject\wornado\template\video.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\python\workspace\TornadoProject\wornado\video\img\c" afterPath="" />
-      <change type="DELETED" beforePath="D:\python\workspace\TornadoProject\wornado\video\readme" afterPath="" />
-      <change type="DELETED" beforePath="D:\python\workspace\TornadoProject\wornado\video\store\d" afterPath="" />
+    <list default="true" id="c84c1e70-705e-4bb1-8be3-c58635615286" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wornado.iws" />
@@ -34,79 +27,70 @@
       <file leaf-file-name="videoHander.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/handler/videoHander.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="177" column="45" selection-start="6443" selection-end="6456" vertical-scroll-proportion="-3.58">
+            <state line="177" column="45" selection-start="6443" selection-end="6456" vertical-scroll-proportion="-61.2">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_video.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/list_video.html">
+      <file leaf-file-name="userHander.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/handler/userHander.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="26" selection-start="341" selection-end="342" vertical-scroll-proportion="-0.7105263">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_topic.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/list_topic.html">
+      <file leaf-file-name="topicHandler.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/handler/topicHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="45" selection-start="449" selection-end="468" vertical-scroll-proportion="-6.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="answer_result.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="categoryHandler.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/handler/categoryHandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baseHandler.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/handler/baseHandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminHandler.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/handler/adminHandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xylx.conf" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/xylx.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="answer_result.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/answer_result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="34" selection-start="306" selection-end="316" vertical-scroll-proportion="0.5882353">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="success.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/success.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topic_middle.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/topic_middle.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="387" selection-end="509" vertical-scroll-proportion="-11.076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video_success_middle.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/video_success_middle.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/dao/video.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="227" column="19" selection-start="9654" selection-end="9658" vertical-scroll-proportion="-2.86">
+            <state line="14" column="34" selection-start="306" selection-end="316" vertical-scroll-proportion="-6.923077">
               <folding />
             </state>
           </provider>
@@ -116,6 +100,15 @@
         <entry file="file://$PROJECT_DIR$/core/codecofig/rule.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="39" column="28" selection-start="1579" selection-end="1600" vertical-scroll-proportion="-3.12">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setting.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/codecofig/setting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -213,6 +206,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="video" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecofig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,7 +556,11 @@
       <created>1353150454643</created>
       <updated>1353150454643</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="用户使用后更新">
+      <created>1353150961800</created>
+      <updated>1353150961800</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -606,55 +667,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/dao/dbtables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="8" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/dao/dbmanager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="0" selection-start="3557" selection-end="3557" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/detail_video.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.307693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/user_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/video_succcess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.1923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/video_success_middle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/success.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -672,13 +684,6 @@
     <entry file="file://$PROJECT_DIR$/template/topic_middle.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="387" selection-end="509" vertical-scroll-proportion="-11.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/codecofig/rule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="28" selection-start="1579" selection-end="1600" vertical-scroll-proportion="-3.12">
           <folding />
         </state>
       </provider>
@@ -704,16 +709,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/handler/videoHander.py">
+    <entry file="file://$PROJECT_DIR$/template/answer_result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="45" selection-start="6443" selection-end="6456" vertical-scroll-proportion="-3.58">
+        <state line="14" column="34" selection-start="306" selection-end="316" vertical-scroll-proportion="-6.923077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/answer_result.html">
+    <entry file="file://$PROJECT_DIR$/core/codecofig/rule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="34" selection-start="306" selection-end="316" vertical-scroll-proportion="0.5882353">
+        <state line="39" column="28" selection-start="1579" selection-end="1600" vertical-scroll-proportion="-3.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/codecofig/setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/handler/videoHander.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="45" selection-start="6443" selection-end="6456" vertical-scroll-proportion="-61.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/handler/userHander.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/handler/topicHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/handler/categoryHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/handler/baseHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/handler/adminHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/xylx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
