@@ -16,8 +16,9 @@
         {% for d in data.get("data") %}
         <tr>
             <td>{{ d.id}}</td>
-            <td><a href="/upload_before/{{ d.id}}" title="点击创建该视频">{{ d.text }}</a></td>
+            <td><a href="/list_video_by_topic/{{ d.id}}" title="列表展示该题目视频">{{ d.text }}</a></td>
             <td>{{ d.create_date }}</td>
+            <td><a href="/upload_before/{{ d.id}}" title="点击创建该视频">创建该题目类视频</a></td>
         </tr>
         {% end %}
     {% end %}

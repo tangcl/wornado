@@ -103,8 +103,11 @@ class DbManager:
         mapper(IndexPraise, indexpraise)
 
 
-        
-    def getSession(self): 
+        print "DbManager.__meta.tables:",DbManager.__meta.tables
+        xylxcore = DbManager.__meta.tables['xylx_core']
+        mapper(XylxCore, xylxcore)
+
+    def getSession(self):
         Session.remove()
         return Session()
     

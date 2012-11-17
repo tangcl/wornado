@@ -29,3 +29,6 @@ class Comment(object):
 
 class IndexPraise(object):
     pass
+
+class XylxCore(object):
+    pass

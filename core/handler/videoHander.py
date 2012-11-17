@@ -69,7 +69,7 @@ class UploadHandler(BaseHandler):
                     file_object = open(local_path, 'wb')
                     file_object.writelines(file_body)
                     file_object.close( )
-                    native_img_path = sha1_encode(file_body) +".jpg"
+                    native_img_path = sha1_encode(file_body)+str(int(time.time())) +".jpg"
                     local_img_path = self.settings.get("img_path") + native_img_path
                     shandler = ScreenHandler()
                     sign = shandler.handler(local_path, local_img_path)
@@ -101,7 +101,9 @@ class NewestHandler(BaseHandler):
     def get(self):
         #获取全网最新100个视频
         videodao = VideoDao()
-        videos = videodao.newest_video()
+        user_id = int(self.current_user)
+
+        videos = videodao.newest_video(user_id)
         if videos:
             return self.render("list_video.html", videos = videos)
         else:
@@ -156,3 +158,41 @@ class PraiseHandler(BaseHandler):
             return self.redirect("/newest")
         else:
             return self.render("error.html",message="您只能赞一次")
+
+class CheckAnswerHandler(BaseHandler):
+    '''
+    arguments - 所有的 GET 或 POST 的参数,字典类型，self.request.arguments.get(name, [])
+    files - 所有通过 multipart/form-data POST 请求上传的文件
+    path - 请求的路径（ ? 之前的所有内容）
+    headers - 请求的开头信息
+    '''
+    def get(self, video_id, topic_id,all_answer_ids):
+        videodao = VideoDao()
+        user_id = int(self.current_user)
+        video_id = int(video_id)
+        topic_id = int(topic_id)
+        all_ids = [int(topic_id) for topic_id in all_answer_ids.split("_")]
+        sign = videodao.check_answer(video_id, topic_id, user_id)
+        #判断答案是否正确
+        try:
+            return self.render("answer_result.html", sign=sign, user_id=user_id)
+        except:
+            return self.render("error.html", message="服务器错误")
+
+class ListVideoByTopicHandler(BaseHandler):
+    '''
+    arguments - 所有的 GET 或 POST 的参数,字典类型，self.request.arguments.get(name, [])
+    files - 所有通过 multipart/form-data POST 请求上传的文件
+    path - 请求的路径（ ? 之前的所有内容）
+    headers - 请求的开头信息
+    '''
+    def get(self, topic_id):
+        videodao = VideoDao()
+        user_id = int(self.current_user)
+        topic_id = int(topic_id)
+        videos = videodao.list_video_by_topic(topic_id, user_id)
+        #判断答案是否正确
+        try:
+            return self.render("list_video.html", videos = videos)
+        except:
+            return self.render("error.html", message="服务器错误")

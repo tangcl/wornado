@@ -4,21 +4,28 @@
 </head>
 <body>
 <table border="1">
+
+    <h1><a href="/show_user/{{ videos.get("user").id}}">用户{{ videos.get("user").name}}的视频列表</a></h1>
     <tr>
         <td>视频地址</td>
         <td>视频评论数</td>
         <td>赞</td>
         <td>答案列表:</td>
     </tr>
-    {% for video in videos %}
+
+    {% for video in videos.get("videos") %}
     <tr>
         <td><a href="/video_detail/{{ video.id }}">{{ video.native_path }}</a></td>
         <td>{{ video.comment}}</td>
         <td><a href="/add_praise/{{ video.id }}" title="点击+1">{{ video.praise}}</a></td>
         <td>
-            {% for topic in video.wrong%}
-                <a href="/check_answer/{{ video.id}}/{{topic.id}}/">{{topic.text}}</a><br/>
-            {% end%}
+            {% if video.wrong %}
+                {% for topic in video.wrong%}
+                    <a href="/check_answer/{{ video.id}}/{{topic.id}}/{{ '_'.join([str(tp.id) for tp in video.wrong])}}">{{topic.text}}</a><br/>
+                {% end%}
+            {% else %}
+                您已回答过该视频
+            {% end %}
         </td>
         <td><form action="/video_comment/{{video.id}}" method="POST">
             <input type="text" name="comment"/>

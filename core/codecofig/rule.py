@@ -36,4 +36,6 @@ application = [
     (r"/add_praise/(.*?)", PraiseHandler),
     (r"/show_user/(.*?)", ShowUserHandler),
     (r"/search_user", SearchUserHandler),
+    (r"/check_answer/(.*?)/(.*?)/(.*?)", CheckAnswerHandler),
+    (r"/list_video_by_topic/(.*?)", ListVideoByTopicHandler),
 ]

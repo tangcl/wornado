@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% if data.get("category_id") %}
+    创建题目成功,2秒后跳转
+<script type="text/javascript">
+    setTimeout(function(){
+        self.location="/list_topic/{{ data.get('category_id') }}";
+    },2000);
+</script>
+{% else %}
+    创建题目失败,2秒后返回
+<script type="text/javascript">
+    setTimeout(function(){
+        self.location=document.referrer;
+    },2000);
+</script>
+{% end %}
+</body>
+</html>

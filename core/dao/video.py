@@ -41,31 +41,66 @@ class VideoDao(object):
     def list_video(self, user_id):
         #查询我的关注用户和关注用户的视频
         self.session = self.getSession()
-        video = self.session.query(VVideo).filter_by(user_id=user_id).all()
-        return video
-
-    def newest_video(self):
-        self.session = self.getSession()
+        data = {}
         try:
-            videos = self.session.query(VVideo).order_by(desc(VVideo.create_date)).all()[:100]
+            videos = self.session.query(VVideo).filter(VVideo.user_id==user_id).order_by(desc(VVideo.create_date)).all()[:100]
             #从该视频相关类别中选择5个答案，同真实答案混合在一起。
-
+            user = self.session.query(TUser).filter(TUser.id==user_id).first()
             for video in videos:
-                wrong = []
-                topic_id = video.topic_id
-                #查询category_topic表.
-                topic = self.session.query(TTopic).filter(CCategoryTopic.topic_id==topic_id, TTopic.id==topic_id).first()
-                #在该类别中选择5个题目
-                category = self.session.query(CCategoryTopic).filter(CCategoryTopic.topic_id == topic_id).first()
-                print "topic.category_topicss:%s" % str(topic.category_topicss)
-                all = self.session.query(TTopic).filter(TTopic.id==CCategoryTopic.topic_id, CCategoryTopic.topic_id!=topic_id, CCategoryTopic.category_id == category.category_id).all()[:5]
-                wrong.extend(all)
-                wrong.insert(random.randrange(0,5),topic)
-                video.wrong = wrong
+                #查询xylxcore表，获取到这个用户是否回答过这个视频的答案
+                xylxcore = self.session.query(XylxCore).filter(XylxCore.video_id==video.id, XylxCore.user_id==user_id, XylxCore.status==1).first()
+                if xylxcore is None:
+                    wrong = []
+                    topic_id = video.topic_id
+                    #查询category_topic表.
+                    topic = self.session.query(TTopic).filter(CCategoryTopic.topic_id==topic_id, TTopic.id==topic_id).first()
+                    #在该类别中选择5个题目
+                    category = self.session.query(CCategoryTopic).filter(CCategoryTopic.topic_id == topic_id).first()
+                    all = self.session.query(TTopic).filter(TTopic.id==CCategoryTopic.topic_id, CCategoryTopic.topic_id!=topic_id, CCategoryTopic.category_id == category.category_id).all()[:5]
+                    wrong.extend(all)
+                    wrong.insert(random.randrange(0,5),topic)
+                    video.wrong = wrong
+                else:
+                    video.wrong = None
+            data["user"] = user
+            data["videos"] = videos
         except Exception, e:
             print "error:", e
             return False
-        return videos
+
+        return data
+
+    def newest_video(self, user_id):
+        self.session = self.getSession()
+        data = {}
+        try:
+
+            videos = self.session.query(VVideo).order_by(desc(VVideo.create_date)).all()[:100]
+            #从该视频相关类别中选择5个答案，同真实答案混合在一起。
+            user = self.session.query(TUser).filter(TUser.id == user_id).first()
+            for video in videos:
+                #查询xylxcore表，获取到这个用户是否回答过这个视频的答案
+                xylxcore = self.session.query(XylxCore).filter(XylxCore.video_id==video.id, XylxCore.user_id==user_id, XylxCore.status==1).first()
+                if xylxcore is None:
+                    wrong = []
+                    topic_id = video.topic_id
+                    #查询category_topic表.
+                    topic = self.session.query(TTopic).filter(CCategoryTopic.topic_id==topic_id, TTopic.id==topic_id).first()
+                    #在该类别中选择5个题目
+                    category = self.session.query(CCategoryTopic).filter(CCategoryTopic.topic_id == topic_id).first()
+                    all = self.session.query(TTopic).filter(TTopic.id==CCategoryTopic.topic_id, CCategoryTopic.topic_id!=topic_id, CCategoryTopic.category_id == category.category_id).all()[:5]
+                    wrong.extend(all)
+                    wrong.insert(random.randrange(0,5),topic)
+                    video.wrong = wrong
+                else:
+                    video.wrong = None
+            data["user"] = user
+            data["videos"] = videos
+
+        except Exception, e:
+            print "error:", e
+            return False
+        return data
 
     def add_comment(self, comment_text, user_id, comment_id=None,  video_id=None):
 
@@ -131,3 +166,63 @@ class VideoDao(object):
             print "error",e
             self.session.rollback()
             return False
+
+    def check_answer(self, video_id, topic_id, user_id):
+        #插入到表Index_praise中，唯一索引
+        self.session = self.getSession()
+        try:
+            video = self.session.query(VVideo).filter(VVideo.id==video_id, VVideo.topic_id==topic_id).first()
+            if video:
+                #根据视频ID，和提交的题目ID,获取得到数据，表示答对
+                xylxcore = self.session.query(XylxCore).filter(XylxCore.video_id==video_id, XylxCore.user_id==user_id, XylxCore.status==1).first()
+                if xylxcore:
+                    return True
+                xylxcore = XylxCore()
+                xylxcore.video_id = video_id
+                xylxcore.user_id = user_id
+                xylxcore.count = 1
+                xylxcore.status = 1
+                xylxcore.create_date = time.strftime("%Y-%m-%d %H:%M:%S")
+                xylxcore.last_date = time.strftime("%Y-%m-%d %H:%M:%S")
+                self.session.add(xylxcore)
+                self.session.commit()
+                return True
+            else:
+                #没有回答正确
+                return False
+        except Exception, e:
+            print "error",e
+            self.session.rollback()
+            return False
+
+    def list_video_by_topic(self, topic_id, user_id):
+        self.session = self.getSession()
+        data = {}
+        try:
+
+            videos = self.session.query(VVideo).filter(VVideo.topic_id==topic_id).order_by(desc(VVideo.create_date)).all()
+            #从该视频相关类别中选择5个答案，同真实答案混合在一起。
+            user = self.session.query(TUser).filter(TUser.id == user_id).first()
+            for video in videos:
+                #查询xylxcore表，获取到这个用户是否回答过这个视频的答案
+                xylxcore = self.session.query(XylxCore).filter(XylxCore.video_id==video.id, XylxCore.user_id==user_id, XylxCore.status==1).first()
+                if xylxcore is None:
+                    wrong = []
+                    topic_id = video.topic_id
+                    #查询category_topic表.
+                    topic = self.session.query(TTopic).filter(CCategoryTopic.topic_id==topic_id, TTopic.id==topic_id).first()
+                    #在该类别中选择5个题目
+                    category = self.session.query(CCategoryTopic).filter(CCategoryTopic.topic_id == topic_id).first()
+                    all = self.session.query(TTopic).filter(TTopic.id==CCategoryTopic.topic_id, CCategoryTopic.topic_id!=topic_id, CCategoryTopic.category_id == category.category_id).all()[:5]
+                    wrong.extend(all)
+                    wrong.insert(random.randrange(0,5),topic)
+                    video.wrong = wrong
+                else:
+                    video.wrong = None
+            data["user"] = user
+            data["videos"] = videos
+
+        except Exception, e:
+            print "error:", e
+            return False
+        return data
